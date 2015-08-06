@@ -50,6 +50,11 @@ build() {
   make
 }
 
+check() {
+  cd "${srcdir}/${_realname}"
+  make -k check
+}
+
 package() {
   cd build-${MINGW_CHOST}
   make DESTDIR=${pkgdir} install
