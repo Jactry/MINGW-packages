@@ -51,7 +51,7 @@ build() {
 }
 
 check() {
-  cd "${srcdir}/${_realname}"
+  cd "${srcdir}/build-${MINGW_CHOST}"
   make -k check
 }
 
